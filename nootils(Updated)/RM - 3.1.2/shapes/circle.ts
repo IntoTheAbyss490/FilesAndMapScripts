@@ -1,20 +1,25 @@
 // deno-lint-ignore-file
-import { rand } from "https://deno.land/x/remapper@3.1.2/src/general.ts";
-import { Wall } from "https://deno.land/x/remapper@3.1.2/src/wall.ts";
+import { Wall } from "https://deno.land/x/remapper@3.1.2/src/mod.ts";
 
-function Rain(startingBeat: number, duration: number, amount: number) {
-    for (let i = 0; i < (duration * amount); i++) {
-        let x = rand(-40, 40)
-        let z = rand(0, 50)
+function circle(startTime: number, endTime: number, track: string, radius: number, amount: number, height: number, length: number, x: number, y: number, z: number) {
+    for (let i = 0; i < amount; i++) {
+        let wall = new Wall(startTime, endTime - startTime, 0, 0, 0)
 
-        let wall = new Wall(startingBeat + (i / amount), 0.5, 1, 0, 0);
+        let angle = Math.PI * 2 / amount;
+        let rot = 360 / amount * i;
+        let radians = angle * i
+        let width = 2 * radius * Math.tan(Math.PI / amount);
+        let sx = x + Math.cos(radians) * radius - width / 2;
+        let sy = y + Math.sin(radians) * radius - height / 2;
 
-        wall.color = [0.419, 0.513, 1, 0.1],
-        wall.interactable = false,
-        wall.scale = [0.1, 6, 0.1],
-            wall.animate.dissolve = [[0, 0.1], [1, 0.2], [1, 0.9], [0, 1]],
-            wall.animate.definitePosition = [[x, rand(200, 300), z, 0], [x, rand(-60, -40), z, 1]]
-        
-        wall.push();
+            wall.interactable = false,
+            wall.track.value = track,
+            wall.scale = [width, height, length],
+            wall.rotation = [0, 0, 0],
+            wall.localRotation = [0, 0, 90 + rot],
+            wall.position = [sx, sy],
+                wall.animate.definitePosition = [[0, 0, z, 0]]
+            
+            wall.push()
     }
-};
+}
