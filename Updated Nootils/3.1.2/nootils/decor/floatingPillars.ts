@@ -2,7 +2,7 @@
 import { rand } from 'https://deno.land/x/remapper@3.1.2/src/general.ts';
 import { Wall } from 'https://deno.land/x/remapper@3.1.2/src/wall.ts';
 
-function FloatingPillars(startBeat: number, endBeat: number, amountPerRow: number, spacing: number, startX: number, height: number, width: number, startZ: number, track: string, R: number, G: number, B: number, A: number, min: number, max: number) {
+export function FloatingPillars(startBeat: number, endBeat: number, amountPerRow: number, spacing: number, startX: number, height: number, width: number, startZ: number, track: string, R: number, G: number, B: number, A: number, min: number, max: number) {
     let z = startZ
     for (let i = 0; i <= amountPerRow; i++) {
         if (z <= spacing * amountPerRow) {
