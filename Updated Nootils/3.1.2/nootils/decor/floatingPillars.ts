@@ -2,6 +2,25 @@
 import { rand } from 'https://deno.land/x/remapper@3.1.2/src/general.ts';
 import { Wall } from 'https://deno.land/x/remapper@3.1.2/src/wall.ts';
 
+/**
+ * Spawns in floating pillars on the desired positions and spacing.
+ * @param startBeat The beat that the pillars should start on.
+ * @param endBeat The beat that the pillars should end on.
+ * @param amountPerRow The amount of pillars per row.
+ * @param spacing The distance between the pillars.
+ * @param startX Where the pillar grid should start on the X axis.
+ * @param height How tall the pillars should be.
+ * @param width How wide the pillars should be.
+ * @param startZ Where the pillar grid should start on the Z axis.
+ * @param track The track that the pillars should be assigned to.
+ * @param R The red value for the color of the pillars.
+ * @param G The green value for the color of the pillars.
+ * @param B The blue value for the color of the pillars.
+ * @param A The alpha value for the color of the pillars.
+ * @author StormPacer
+ * @author IntoTheAbyss490(Updating Everything)
+ */
+
 export function FloatingPillars(startBeat: number, endBeat: number, amountPerRow: number, spacing: number, startX: number, height: number, width: number, startZ: number, track: string, R: number, G: number, B: number, A: number, min: number, max: number) {
     let z = startZ
     for (let i = 0; i <= amountPerRow; i++) {

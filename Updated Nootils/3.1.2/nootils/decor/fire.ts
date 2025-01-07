@@ -2,6 +2,19 @@
 import { Wall } from "https://deno.land/x/remapper@3.1.2/src/wall.ts";
 import { rand } from "https://deno.land/x/remapper@3.1.2/src/general.ts";
 
+/**
+ * Spawns in walls that resemble a fire.
+ * @param startingBeat The beat that the fire should start on.
+ * @param duration For how many beats the fire should last for.
+ * @param fireWallDuration For how many beats each fire wall should last for.
+ * @param size How big the walls should be.
+ * @param x The starting X position of the fire.
+ * @param y The starting Y position of the fire.
+ * @param z The starting Z position of the fire.
+ * @author StormPacer
+ * @author IntoTheAbyss490(Updating Everything)
+ */
+
 export function Fire(startingBeat: number, duration: number, fireWallDuration: number, size: number, x: number, y: number, z: number) {
     for (let i = 0; i < (duration * 6); i++) {
 

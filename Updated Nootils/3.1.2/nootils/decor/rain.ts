@@ -2,6 +2,15 @@
 import { Wall } from "https://deno.land/x/remapper@3.1.2/src/mod.ts";
 import { rand } from "https://deno.land/x/remapper@3.1.2/src/general.ts"
 
+/**
+ * Spawns in walls that resemble rain.
+ * @param startingBeat The beat that the rain should start on.
+ * @param duration For how many beats the rain should last for.
+ * @param amount How many walls should be created per beat.
+ * @author StormPacer
+ * @author IntoTheAbyss490(Updating Everything)
+ */
+
 export function Rain(startingBeat: number, duration: number, amount: number) {
     for (let i = 0; i < (duration * amount); i++) {
         let x = rand(-40, 40)

@@ -9,9 +9,10 @@ import * as Remapper from "https://deno.land/x/remapper@2.1.0/src/mod.ts"
  * @param endTime The beat of the LAST wall you want to change the border of (will end at the last wall if it is left 'undefined').
  * @param track Assigns a track to the filtered walls (optional).
  * @author Spidey
+ * @author IntoTheAbyss490(Updating Everything)
  */
 
-function wallBorderSize(size: number = 1, startTime: number = Number.NEGATIVE_INFINITY, endTime: number = Number.POSITIVE_INFINITY, track?: string){
+export function wallBorderSize(size: number = 1, startTime: number = Number.NEGATIVE_INFINITY, endTime: number = Number.POSITIVE_INFINITY, track?: string){
 	const filteredwalls = Remapper.activeDiff.walls.filter(w => w.time >= startTime && w.time <= endTime);
 	filteredwalls.forEach(wall => {
 		if (!wall.customData) wall.customData = {};
