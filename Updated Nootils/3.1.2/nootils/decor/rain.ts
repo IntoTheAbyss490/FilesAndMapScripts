@@ -2,7 +2,7 @@
 import { Wall } from "https://deno.land/x/remapper@3.1.2/src/mod.ts";
 import { rand } from "https://deno.land/x/remapper@3.1.2/src/general.ts"
 
-function Rain(startingBeat: number, duration: number, amount: number) {
+export function Rain(startingBeat: number, duration: number, amount: number) {
     for (let i = 0; i < (duration * amount); i++) {
         let x = rand(-40, 40)
         let z = rand(0, 50)
