@@ -8,6 +8,7 @@ As Remapper updates I will do my best to keep the functions from Nootils updated
 All credit goes to the contributors found here https://github.com/StormPacer/nootils
 
 All I have done is alter it so that it works with Remapper as a function that goes into your script.
+I have included the original notes that explain what everythng does, I have also added some options so I updated the notes a bit.
 
 **How To use The Functions:**
 Copy and paste the Functions into your script, and call it AFTER the function with all specified parameters.
