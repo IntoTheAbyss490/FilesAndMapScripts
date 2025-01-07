@@ -2,7 +2,7 @@
 import { Wall } from "https://deno.land/x/remapper@3.1.2/src/wall.ts";
 import { rand } from "https://deno.land/x/remapper@3.1.2/src/general.ts";
 
-function Smoke(startingBeat: number, duration: number, smokeWallDuration: number, size: number, x: number, y: number, z: number) {
+export function Smoke(startingBeat: number, duration: number, smokeWallDuration: number, size: number, x: number, y: number, z: number) {
     for (let i = 0; i < (duration * 6); i++) {
 
         let wall = new Wall(startingBeat + (i / 6), smokeWallDuration, 1, 0, 0);
