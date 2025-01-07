@@ -4,7 +4,7 @@ You may use the files and effects in this repo to **LEARN** as well as use the c
 Again, you must **give credit** to me in the script(if you put the script anywhere such as Github) and map description!
 
 **Updated Nootils(WIP)**
-As Remapper updates I will do my best to keep the functions from Nootils updated
+As Remapper updates I will do my best to keep the functions from Nootils updated https://github.com/IntoTheAbyss490/MapScriptsAndFiles/tree/main/Updated%20Nootils/3.1.2
 All credit goes to the contributors found here https://github.com/StormPacer/nootils
 
 **How To use The Functions:**
