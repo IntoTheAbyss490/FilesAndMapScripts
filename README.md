@@ -8,7 +8,7 @@ Again, you must **give credit** to me in the script(if you put the script anywhe
 As Remapper updates I will do my best to keep the functions from Nootils updated.
 [Latest Update](https://github.com/IntoTheAbyss490/MapScriptsAndFiles/tree/main/Updated%20Nootils/3.1.2) 
 
-All credit goes to the contributors found [here](https://github.com/StormPacer/nootils)
+All credit goes to the contributors found [here](https://github.com/StormPacer/nootils) along with installation instructions.
 **I will be PR-ing everything into the nootils repo, but I will leave the code here aswell(for EOA for me)**
 
 **How To use The Functions:**
@@ -34,5 +34,7 @@ Have fun, learn some stuff, and don't be mean:)
 *(I will do my best to update everything)*
 
 **Maps in Repo:**
+
+# Other Files
 
 
