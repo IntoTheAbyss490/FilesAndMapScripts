@@ -27,6 +27,12 @@ Have fun, learn some stuff, and don't be mean:)
 - Add descriptions of params
 - Add color params to functions
 - Update wallbordersize function
+- Fix note trails being weirdly offset from notes
+- Finish track.ts
+
+
+- PR to Nootils REPO
+
 
 # Maps And Files 
 *(I will do my best to update everything)*
