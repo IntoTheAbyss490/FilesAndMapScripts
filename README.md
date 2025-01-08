@@ -29,11 +29,7 @@ Have fun, learn some stuff, and don't be mean:)
 - Update wallbordersize function
 - Fix note trails being weirdly offset from notes
 - Finish track.ts
- 
- 
 - PR to Nootils REPO
- 
- 
 # Maps And Files 
 *(I will do my best to update everything)*
 
