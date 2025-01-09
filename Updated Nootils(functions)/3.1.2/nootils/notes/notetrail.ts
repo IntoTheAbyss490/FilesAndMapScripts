@@ -7,7 +7,7 @@ enum NoteTrailType {
     BOTH = "both",
 }
 
-export function InternalNoteTrail(filterednotes: Note[], length: number, type: NoteTrailType) {
+function InternalNoteTrail(filterednotes: Note[], length: number, type: NoteTrailType) {
     filterednotes.forEach(note => {
         note.noteGravity = false;
         note.noteLook = false;
@@ -35,7 +35,7 @@ export function InternalNoteTrail(filterednotes: Note[], length: number, type: N
  * @author cal117
  * @author IntoTheAbyss490(Updating Everything)
  */
-export function NoteTrail(startBeat: number, endBeat: number, length: number, type: NoteTrailType) {
+function NoteTrail(startBeat: number, endBeat: number, length: number, type: NoteTrailType) {
     const filterednotes = activeDiff.notes.filter(note => note.time >= startBeat && note.time <= endBeat);
     InternalNoteTrail(filterednotes, length, type);
 }
@@ -51,7 +51,7 @@ export function NoteTrail(startBeat: number, endBeat: number, length: number, ty
  * @author IntoTheAbyss490(Updating Everything)
  */
 
-export function NoteTrailTrack(track: string, length: number, type: NoteTrailType) {
+function NoteTrailTrack(track: string, length: number, type: NoteTrailType) {
     const filterednotes = activeDiff.notes.filter(note => {
         if(Array.isArray(note.track.value)) return note.track.value.includes(track);
         else if (note.track.value == track) return true;
