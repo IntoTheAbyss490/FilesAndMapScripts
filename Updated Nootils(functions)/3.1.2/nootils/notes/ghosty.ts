@@ -3,7 +3,7 @@ import { activeDiff, EASE, Note } from "https://deno.land/x/remapper@3.1.2/src/m
 
 /** Base function needed to make the effects in ghosty.ts work*/
 
-export function InternalGhosty(filteredNotes: Note[], speed: number, maxY: number, easing: EASE = "easeInOutCubic", transparent?: boolean) {
+function InternalGhosty(filteredNotes: Note[], speed: number, maxY: number, easing: EASE = "easeInOutCubic", transparent?: boolean) {
     const positions: any = [[0, 0, 0, 0]];
     let positive = false;
     for (let i = speed + 1; i > 0; i--) {
@@ -38,7 +38,7 @@ export function InternalGhosty(filteredNotes: Note[], speed: number, maxY: numbe
  * @author IntoTheAbyss490(Updating Everything)
  */
 
-export function GhostyTrack(track: string, speed: number, maxY: number, easing: EASE = "easeInOutCubic", transparent?: boolean) {
+function GhostyTrack(track: string, speed: number, maxY: number, easing: EASE = "easeInOutCubic", transparent?: boolean) {
     const filteredNotes = activeDiff.notes.filter(note => {
         if(!note.customData) note.customData = {};
         if(Array.isArray(note.track.value)) return note.track.value.includes(track);
@@ -62,7 +62,7 @@ export function GhostyTrack(track: string, speed: number, maxY: number, easing: 
  * @author IntoTheAbyss490(Updating Everything)
  */
 
-export function Ghosty(startBeat: number, endBeat: number, speed: number, maxY: number, easing: EASE = "easeInOutCubic", transparent?: boolean) {
+function Ghosty(startBeat: number, endBeat: number, speed: number, maxY: number, easing: EASE = "easeInOutCubic", transparent?: boolean) {
     const filteredNotes = activeDiff.notes.filter(n => n.time >= startBeat && n.time <= endBeat);
     InternalGhosty(filteredNotes, speed, maxY, easing, transparent);
 }
