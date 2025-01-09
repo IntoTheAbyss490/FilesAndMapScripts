@@ -24,12 +24,10 @@ One more thing, I have made maps before making this repo, however, those maps wi
 Have fun, learn some stuff, and don't be mean:) 
 
 # ToDo 
-- Add descriptions of params
-- Add color params to functions
 - Update wallbordersize function
-- Fix note trails being weirdly offset from notes
 - Finish track.ts
-- PR to Nootils REPO
+- Possibly fix ghosty.ts but that can wait:D
+
 # Maps And Files 
 *(I will do my best to update everything)*
 
